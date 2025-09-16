@@ -1,4 +1,4 @@
-extends CharacterBody2D
+class_name Player extends CharacterBody2D
 
 var speed := 300.0
 var viewport_size: Vector2
@@ -18,7 +18,7 @@ func _physics_process(delta: float) -> void:
 	
 	var direction = Input.get_axis("move_left", "move_right")
 	if direction:
-		velocity.x = direction * speed 
+		velocity.x = direction * speed
 	else:
 		velocity.x = move_toward(velocity.x, 0, speed)
 	

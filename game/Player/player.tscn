@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://bvte3ce2mcnsh"]
 
 [ext_resource type="Texture2D" uid="uid://biq162o60xogg" path="res://assets/textures/character/Skin1Idle.png" id="1_15dh6"]
-[ext_resource type="Script" uid="uid://d2wsmerwslc5r" path="res://game/Player/player.gd" id="1_q80tm"]
+[ext_resource type="Script" uid="uid://d2wsmerwslc5r" path="res://game/player/player.gd" id="1_q80tm"]
 [ext_resource type="Texture2D" uid="uid://bb4qx7i6q1cwx" path="res://assets/textures/character/Skin1Jump.png" id="2_bkrff"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_15dh6"]
@@ -132,9 +132,11 @@ _data = {
 }
 
 [node name="Player" type="CharacterBody2D"]
+collision_mask = 2
 script = ExtResource("1_q80tm")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 100
 position = Vector2(0, -46)
 scale = Vector2(0.35, 0.35)
 texture = ExtResource("1_15dh6")
