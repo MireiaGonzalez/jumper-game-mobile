@@ -1,13 +1,14 @@
-[gd_scene load_steps=8 format=3 uid="uid://bvte3ce2mcnsh"]
+[gd_scene load_steps=9 format=3 uid="uid://bvte3ce2mcnsh"]
 
 [ext_resource type="Texture2D" uid="uid://biq162o60xogg" path="res://assets/textures/character/Skin1Idle.png" id="1_15dh6"]
+[ext_resource type="Script" uid="uid://d2wsmerwslc5r" path="res://game/Player/player.gd" id="1_q80tm"]
 [ext_resource type="Texture2D" uid="uid://bb4qx7i6q1cwx" path="res://assets/textures/character/Skin1Jump.png" id="2_bkrff"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_15dh6"]
 size = Vector2(38, 20)
 
-[sub_resource type="Animation" id="Animation_15dh6"]
-resource_name = "fall"
+[sub_resource type="Animation" id="Animation_bkrff"]
+length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -45,8 +46,8 @@ tracks/2/keys = {
 "values": [Vector2(0.35, 0.35)]
 }
 
-[sub_resource type="Animation" id="Animation_bkrff"]
-length = 0.001
+[sub_resource type="Animation" id="Animation_15dh6"]
+resource_name = "fall"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -131,6 +132,7 @@ _data = {
 }
 
 [node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_q80tm")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -46)
